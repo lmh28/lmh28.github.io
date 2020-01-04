@@ -46,9 +46,11 @@
 <nav id="main-nav" class="alignright">
   <ul>
     
-      <li><a href="/">Home</a></li>
+      <li><a href="/">首页</a></li>
     
-      <li><a href="/archives">Archives</a></li>
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="https://github.com/lmh28/lmh28.github.io" target="_blank" rel="noopener">GitHub</a></li>
     
   </ul>
   <div class="clearfix"></div>
@@ -133,8 +135,11 @@
     </header>
     <div class="entry">
       
-        <blockquote>
-<p>最近挺好的</p>
+        <h3 id="1-为每一个页面添加关键字和描述信息（添加在-header-标签中）"><a href="#1-为每一个页面添加关键字和描述信息（添加在-header-标签中）" class="headerlink" title="1.为每一个页面添加关键字和描述信息（添加在 header 标签中）"></a>1.为每一个页面添加关键字和描述信息（添加在 header 标签中）</h3><h3 id="2-为每一个-img-设置一个-alt-属性"><a href="#2-为每一个-img-设置一个-alt-属性" class="headerlink" title="2.为每一个 img 设置一个 alt 属性"></a>2.为每一个 img 设置一个 alt 属性</h3><h3 id="3-优化网页加载速度"><a href="#3-优化网页加载速度" class="headerlink" title="3.优化网页加载速度"></a>3.优化网页加载速度</h3><h3 id="4-不要在页面中显示空连接"><a href="#4-不要在页面中显示空连接" class="headerlink" title="4.不要在页面中显示空连接"></a>4.不要在页面中显示空连接</h3><h3 id="5-写代码要规范，使用语义化标签，有助于网页优化"><a href="#5-写代码要规范，使用语义化标签，有助于网页优化" class="headerlink" title="5.写代码要规范，使用语义化标签，有助于网页优化"></a>5.写代码要规范，使用语义化标签，有助于网页优化</h3><h3 id="6-在网页中尽量设置-h1-h6-标签，增加-SEO-的命中权重"><a href="#6-在网页中尽量设置-h1-h6-标签，增加-SEO-的命中权重" class="headerlink" title="6.在网页中尽量设置 h1-h6 标签，增加 SEO 的命中权重"></a>6.在网页中尽量设置 h1-h6 标签，增加 SEO 的命中权重</h3><h3 id="7-定期更新网站内容，发布新文章，增加搜索引擎的收录"><a href="#7-定期更新网站内容，发布新文章，增加搜索引擎的收录" class="headerlink" title="7.定期更新网站内容，发布新文章，增加搜索引擎的收录"></a>7.定期更新网站内容，发布新文章，增加搜索引擎的收录</h3><h1 id="vue-中如果做-seo-优化"><a href="#vue-中如果做-seo-优化" class="headerlink" title="vue 中如果做 seo 优化"></a>vue 中如果做 seo 优化</h1><h2 id="设置一个单独的用于-seo-搜索的网站"><a href="#设置一个单独的用于-seo-搜索的网站" class="headerlink" title="设置一个单独的用于 seo 搜索的网站"></a>设置一个单独的用于 seo 搜索的网站</h2><blockquote>
+<p>在蜘蛛爬取网站的时候把搜索引擎的抓取过程转接到另一个单独的网站。这个网站主要是一些静态页面，是传统的多页面网站，主要用来做 seo 优化的。可以没有 css 样式，没有 js 代码，只有 html 标签。</p>
+</blockquote>
+<h2 id="nuxt"><a href="#nuxt" class="headerlink" title="nuxt"></a>nuxt</h2><blockquote>
+<p>nuxt 是一个 vue 的框架，可以实现服务器端渲染。可以使用 vue 创建多页面应用程序。</p>
 </blockquote>
 
       
@@ -173,7 +178,34 @@
     </header>
     <div class="entry">
       
-        
+        <blockquote>
+<p>什么是 viewpoint？<br>viewpoint:视口，默认宽度是 1024，initial-scale 设置比例</p>
+</blockquote>
+<h3 id="1-利用-meta-标签对-viewport-进行控制"><a href="#1-利用-meta-标签对-viewport-进行控制" class="headerlink" title="1.利用 meta 标签对 viewport 进行控制"></a>1.利用 meta 标签对 viewport 进行控制</h3><blockquote>
+<p>该 meta 标签的作用是让当前 viewport 的宽度等于设备的宽度，同时不允许用户手动缩放。也许允不允许用户缩放不同的网站有不同的要求，但让 viewport 的宽度等于设备的宽度，这个应该是大家都想要的效果，如果你不这样的设定的话，那就会使用那个比屏幕宽的默认 viewport，也就是说会出现横向滚动条。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">  <span class="attr">name</span>=<span class="string">"viewport"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">  <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">/&gt;</span></span></pre></td></tr></table></figure>
+
+<h3 id="2-用户缩放出现-1px-边框问题"><a href="#2-用户缩放出现-1px-边框问题" class="headerlink" title="2.用户缩放出现 1px 边框问题"></a>2.用户缩放出现 1px 边框问题</h3><blockquote>
+<p>有的手机分辨率比较高，是 2 倍或 3 倍屏，手机上的浏览器就会把 css 中的 1px 放大 2 到 3 倍。可以利用 scroll 缩放的原理将边框重置。</p>
+</blockquote>
+<blockquote>
+<p>出现 1px 还有用户缩放页面也会引起 css 中 px 的变化。例如：当用户把页面放大或缩小一倍，css 中 1px 所代表的的物理像素也会增加或缩小一倍</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">使用 rem 为单位。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">使用 js 获取 dpr 值动态计算视口缩放，设置 viewport content 属性。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">计算得到缩放比后，应该对应给 html 的 font-size 乘 回缩放比。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">边框使用 px 为单位，其余元素均使用 rem 单位，这样视口的缩放就只会影响到 px 单位</span></pre></td></tr></table></figure>
+
+<h3 id="3-css-样式统一"><a href="#3-css-样式统一" class="headerlink" title="3.css 样式统一"></a>3.css 样式统一</h3><blockquote>
+<p>我们需要重置页面样式，因为在不同的手机浏览器上，默认的样式是不统一的</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">解决办法：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    重置所有的元素默认样式(可以写一个公共样式reset.css)</span></pre></td></tr></table></figure>
+
+<h3 id="4-300-毫秒点击延迟问题"><a href="#4-300-毫秒点击延迟问题" class="headerlink" title="4.300 毫秒点击延迟问题"></a>4.300 毫秒点击延迟问题</h3><blockquote>
+<p>在移动端开发中，某些机型上使用 click 事件会延迟 300ms 才执行，这样影响了用户体验</p>
+</blockquote>
+<h3 id="5-上下拉动滚动条是出现卡顿、慢"><a href="#5-上下拉动滚动条是出现卡顿、慢" class="headerlink" title="5.上下拉动滚动条是出现卡顿、慢"></a>5.上下拉动滚动条是出现卡顿、慢</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">-webkit-overflow-scrolling</span>: touch;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">overflow-scrolling</span>: touch;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="6-旋转屏幕时，字体大小调整的问题"><a href="#6-旋转屏幕时，字体大小调整的问题" class="headerlink" title="6.旋转屏幕时，字体大小调整的问题"></a>6.旋转屏幕时，字体大小调整的问题</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">* &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="attribute">-webkit-text-size-adjust</span>: <span class="number">100%</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
       
     </div>
     
