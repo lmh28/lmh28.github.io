@@ -3,16 +3,21 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>menghuaL</title>
+  <title>js中常见的设计模式 | menghuaL</title>
   <meta name="author" content="吕梦华" />
 
+  
+  <meta name="description" content="1.单例模式
+保证一个类只有一个实例，并提供一个访问它的全局访问点，每一个实例都不相等，都是单一
+
+1var singleTom = (function() &amp;#123;2  var _instance = null; //占位3  function Foo() &amp;#123;&amp;#125;4  ret" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  
+  <meta property="og:title" content="js中常见的设计模式" />
   <meta property="og:site_name" content="menghuaL" />
 
   
@@ -55,8 +60,7 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -66,7 +70,7 @@
       
       
   
-    <h1 class="title"><a href="/2020/01/04/js中常见的设计模式/">js中常见的设计模式</a></h1>
+    <h1 class="title">js中常见的设计模式</h1>
   
 
     </header>
@@ -115,310 +119,6 @@
 
 
 
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-12-27T12:59:29.000Z"><a href="/2019/12/27/SEO优化/">2019-12-27</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2019/12/27/SEO优化/">SEO优化(又叫搜索引擎优化)</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <blockquote>
-<p>最近挺好的</p>
-</blockquote>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' target="_blank" rel="noopener" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-11-20T09:17:01.000Z"><a href="/2019/11/20/移动端开发需要注意的事项/">2019-11-20</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2019/11/20/移动端开发需要注意的事项/">移动端开发需要注意的事项</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' target="_blank" rel="noopener" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-08-02T01:10:28.000Z"><a href="/2019/08/02/常见的定位方式/">2019-08-02</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2019/08/02/常见的定位方式/">常见的定位方式</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1>position:static/relative/absolute/fixed</h1>
-
-<h3>1.relative:相对定位</h3>
-
-<blockquote>
-<p><font color=red >相对定位的偏移参考元素是元素本身，不会使定位元素脱离文档流</font>。元素的初始位置占据的空间会被保留。（相对定位常常作为 absolute 的父级定位）。根据 top left bottom right 修改位置</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">position: relative;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">top:<span class="number">0</span>px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">left:<span class="number">0</span>px</span></pre></td></tr></table></figure>
-
-<h3>2.absolute:绝对定位</h3>
-
-<blockquote>
-<p>绝对定位元素 <font color=red>以父级元素中最近的定位元素为参考坐标，如果绝对定位元素的父级元素中没有采用定位，那么绝对定位元素的参考对象是根节点(html)</font>，元素会脱离文档流，不占据空间。根据 top left bottom right 修改位置</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">position: absolute;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">top:<span class="number">0</span>px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">left:<span class="number">0</span>px</span></pre></td></tr></table></figure>
-
-<h3>3.fixed:固定定位</h3>
-
-<blockquote>
-<p>固定定位<font color=red>位移的参考坐标是可视窗口</font>，使用固定定位会使元素脱离文档流。根据 top left bottom right 修改位置</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">position: fixed;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">top:<span class="number">0</span>px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">left:<span class="number">0</span>px</span></pre></td></tr></table></figure>
-
-<h3>4.static:默认定位</h3>
-
-<blockquote>
-<p>默认值，元素框正常生成的，top left bottom right 这几个偏移属性不会影响其静态定位的正常显示</p>
-</blockquote>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' target="_blank" rel="noopener" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-06-04T07:09:31.000Z"><a href="/2019/06/04/常见的浏览器端的存储技术/">2019-06-04</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2019/06/04/常见的浏览器端的存储技术/">常见的浏览器端的存储技术</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="常见的浏览器端存储技术有三种"><a href="#常见的浏览器端存储技术有三种" class="headerlink" title="常见的浏览器端存储技术有三种"></a>常见的浏览器端存储技术有三种</h2><ul>
-<li>localStorage</li>
-<li>cookie</li>
-<li>sessionStorage</li>
-</ul>
-<h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><blockquote>
-<p>都是保存在浏览器端，且同源</p>
-</blockquote>
-<h2 id="cookie-和-sessionStorage-以及-localStorage-的区别是什么？"><a href="#cookie-和-sessionStorage-以及-localStorage-的区别是什么？" class="headerlink" title="cookie 和 sessionStorage 以及 localStorage 的区别是什么？"></a>cookie 和 sessionStorage 以及 localStorage 的区别是什么？</h2><ol>
-<li><p>从生命周期来说</p>
-<ul>
-<li>Cookie 作用范围。如不设置失效时间，则表示这个 cookie 的生命周期为浏览器回话期间，关闭浏览器，cookie 就会消失。若设置了失效时间，浏览器会把 cookie 保存到硬盘中，关闭后再打开浏览器这些 cookie 仍然有效直到超过设定的过期时间。</li>
-<li>localStorage 除非被清除，否则始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据</li>
-<li>sessionStorage 仅在当前会话期间有效，关闭浏览器会被清除</li>
-</ul>
-</li>
-<li><p>存放数据大小</p>
-<ul>
-<li>Cookie 不能超过 4K</li>
-<li>localStorage 一般为 5MB 或者更大</li>
-<li>sessionStorage 一般为 5MB 或者更大</li>
-</ul>
-</li>
-<li><p>与服务器端通信</p>
-<ul>
-<li>Cookie 每次请求都会携带在 http 头中，如果使用 Cookie 保存过多数据会带来性能问题。在所有同源窗口中都是共享的</li>
-<li>localStorage 仅在客户端中保存，不参与服务器的通信。在所有同源窗口中都是共享的</li>
-<li>sessionStorage 不在不同的浏览器窗口共享，即使在同一个页面。仅在客户端中保存，不参与服务器的通信。</li>
-</ul>
-</li>
-<li><p>易用性</p>
-<ul>
-<li>Cookie 需要程序员自己封装，原生的 Cookie 接口不友好</li>
-<li>localStorage 原生接口可以接受，亦可再次封装来对 Object 和 Array 有更好的支持</li>
-<li>sessionStorage 原生接口可以接受，亦可再次封装来对 Object 和 Array 有更好的支持</li>
-</ul>
-</li>
-<li><p>数据传递不同</p>
-<ul>
-<li>Cookie 数据始终在同源的 http 请求中携带（即使不需要），即 cookie 在浏览器和服务器间来回传递，cookie 数据还有路径（path）的概念，可以限制 cookie 只属于某个路径下</li>
-<li>sessionStorage 和 localStorage 不会自动把数据发送给服务器，仅在本地保存。</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' target="_blank" rel="noopener" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2018-12-27T13:25:48.000Z"><a href="/2018/12/27/GET和POST的区别/">2018-12-27</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/12/27/GET和POST的区别/">GET和POST的区别</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2>一、GET和POST的区别</h2>
-1.请求方式不同
-
-<blockquote>
-<p>GET 请求的数据会暴露在地址栏中。而 POSt 的所有操作对用户来说都是不可见的。<br>get 请求：请求的数据会附加在 URL 之后<em>用户是可以看到的</em>。以？分割 URL 和传输数据，多个参数的时候以&amp;链接，编码格式采用的是 ASCⅡ 编码，不是 ASCⅡ 编码都会编码之后在传输（安全性相对 post 低）<br>post 请求：post 请求会把请求的数据放置在 HTTP 请求包的包体中</p>
-</blockquote>
-<p>2.传输数据的大小不同</p>
-<blockquote>
-<p>Get 传送的数据量较小，这主要是因为受 URL 长度限制,URL 最大长度是 2048 个字符；Post 传送的数据量较大，一般被默认为不受限制。<br>git：在 HTTP 规范性中，没有对 URL 的长度和传输的数据大小进行限制，但是在实际开发过程中，对 GET，特定的浏览器和服务器对 URL 的长度有限制，因此 Git 请求传输数据会受到 url 长度的限制<br>POST：对于 POST，由于不是 URL 传值，理论上是不会受限制的，但是实际上各个服务器会规定对 POST 提交数据大小进行限制，Apache、IIS 都有各自的配置。</p>
-</blockquote>
-<p>3.从安全性来说</p>
-<blockquote>
-<p>POST 的安全性比 GET 的高。这里的安全是指真正的安全，而不同于上面 GET 提到的安全方法中的安全，上面提到的安全仅仅是不修改服务器的数据。比如，在进行登录操作，通过 GET 请求，用户名和密码都会暴露再 URL 上，因为登录页面有可能被浏览器缓存以及其他人查看浏览器的历史记录的原因，此时的用户名和密码就很容易被他人拿到了。除此之外，GET 请求提交的数据还可能会造成 Cross-site request frogery 攻击</p>
-</blockquote>
-<p>4.后退页面</p>
-<blockquote>
-<p>get 后退不会有影响，post 后退会重新进行提交</p>
-</blockquote>
-<p>5.缓存</p>
-<blockquote>
-<p>get 请求可以被缓存，post 不可以被缓存</p>
-</blockquote>
-<p>6.历史记录</p>
-<blockquote>
-<p>get 请求的记录会留在历史记录中，post 请求不会留在历史记录</p>
-</blockquote>
-<h2>二、post 相比较 get 传参方式的优点</h2>
-
-<p>1.安全性比 get 传参方式好：</p>
-<blockquote>
-<p>a.存在于 HTTP 包中，一般不会直接被查找到<br>b.post 不会被浏览器进行缓存<br>c.不会留在历史记录中</p>
-</blockquote>
-<p>(并不代表 post 一定安全，因为在 HTTP 下都是明文传输，post 仍然可以被查找到，增加安全性最好使用 https 协议)</p>
-<p>2.post 没有字符和编码的限制，能发送的数据类型更多</p>
-<p>3.post 传送数据没有大小限制，比 get 可以发送的更多的数据</p>
-<blockquote>
-<p>post 的缺点：速度比 get 传输慢，get 的效率更高<br>get 请求方式放在 URL 后面<br>post 请求方式放在 send()里，前面必须放 xhr.setRequestHeader(“Content-type”, “application/x-www-form-urlencoded”);后</p>
-</blockquote>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' target="_blank" rel="noopener" class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-
-<nav id="pagination">
-  
-</nav>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

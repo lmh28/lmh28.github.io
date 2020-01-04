@@ -3,18 +3,29 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>SEO优化(又叫搜索引擎优化) | menghuaL</title>
+  <title>常见的浏览器端的存储技术 | menghuaL</title>
   <meta name="author" content="吕梦华" />
 
   
-  <meta name="description" content="最近挺好的" />
+  <meta name="description" content="常见的浏览器端存储技术有三种
+localStorage
+cookie
+sessionStorage
+
+共同点
+都是保存在浏览器端，且同源
+
+cookie 和 sessionStorage 以及 localStorage 的区别是什么？
+从生命周期来说
+
+Cookie 作用范围。如不设置失效时间，则表" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <meta property="og:title" content="SEO优化(又叫搜索引擎优化)" />
+  <meta property="og:title" content="常见的浏览器端的存储技术" />
   <meta property="og:site_name" content="menghuaL" />
 
   
@@ -63,19 +74,60 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2019-12-27T12:59:29.000Z"><a href="/2019/12/27/SEO优化/">2019-12-27</a></time>
+        <time datetime="2019-06-04T07:09:31.000Z"><a href="/2019/06/04/常见的浏览器端的存储技术/">2019-06-04</a></time>
       
       
   
-    <h1 class="title">SEO优化(又叫搜索引擎优化)</h1>
+    <h1 class="title">常见的浏览器端的存储技术</h1>
   
 
     </header>
     <div class="entry">
       
-        <blockquote>
-<p>最近挺好的</p>
+        <h2 id="常见的浏览器端存储技术有三种"><a href="#常见的浏览器端存储技术有三种" class="headerlink" title="常见的浏览器端存储技术有三种"></a>常见的浏览器端存储技术有三种</h2><ul>
+<li>localStorage</li>
+<li>cookie</li>
+<li>sessionStorage</li>
+</ul>
+<h2 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h2><blockquote>
+<p>都是保存在浏览器端，且同源</p>
 </blockquote>
+<h2 id="cookie-和-sessionStorage-以及-localStorage-的区别是什么？"><a href="#cookie-和-sessionStorage-以及-localStorage-的区别是什么？" class="headerlink" title="cookie 和 sessionStorage 以及 localStorage 的区别是什么？"></a>cookie 和 sessionStorage 以及 localStorage 的区别是什么？</h2><ol>
+<li><p>从生命周期来说</p>
+<ul>
+<li>Cookie 作用范围。如不设置失效时间，则表示这个 cookie 的生命周期为浏览器回话期间，关闭浏览器，cookie 就会消失。若设置了失效时间，浏览器会把 cookie 保存到硬盘中，关闭后再打开浏览器这些 cookie 仍然有效直到超过设定的过期时间。</li>
+<li>localStorage 除非被清除，否则始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据</li>
+<li>sessionStorage 仅在当前会话期间有效，关闭浏览器会被清除</li>
+</ul>
+</li>
+<li><p>存放数据大小</p>
+<ul>
+<li>Cookie 不能超过 4K</li>
+<li>localStorage 一般为 5MB 或者更大</li>
+<li>sessionStorage 一般为 5MB 或者更大</li>
+</ul>
+</li>
+<li><p>与服务器端通信</p>
+<ul>
+<li>Cookie 每次请求都会携带在 http 头中，如果使用 Cookie 保存过多数据会带来性能问题。在所有同源窗口中都是共享的</li>
+<li>localStorage 仅在客户端中保存，不参与服务器的通信。在所有同源窗口中都是共享的</li>
+<li>sessionStorage 不在不同的浏览器窗口共享，即使在同一个页面。仅在客户端中保存，不参与服务器的通信。</li>
+</ul>
+</li>
+<li><p>易用性</p>
+<ul>
+<li>Cookie 需要程序员自己封装，原生的 Cookie 接口不友好</li>
+<li>localStorage 原生接口可以接受，亦可再次封装来对 Object 和 Array 有更好的支持</li>
+<li>sessionStorage 原生接口可以接受，亦可再次封装来对 Object 和 Array 有更好的支持</li>
+</ul>
+</li>
+<li><p>数据传递不同</p>
+<ul>
+<li>Cookie 数据始终在同源的 http 请求中携带（即使不需要），即 cookie 在浏览器和服务器间来回传递，cookie 数据还有路径（path）的概念，可以限制 cookie 只属于某个路径下</li>
+<li>sessionStorage 和 localStorage 不会自动把数据发送给服务器，仅在本地保存。</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
