@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>react组件生命周期 | menghuaL</title>
+  <meta name="author" content="吕梦华" />
+
+  
+  <meta name="description" content="前言：react生命周期构子函数分为三个阶段:挂载阶段、更新阶段、销毁阶段
+
+一、挂载阶段的生命周期函数
+constructor(props)
+应当做些初始化的动作，如：初始化state，将事件处理函数绑定到类实例上
+
+
+static getDerivedStateFromProps(props,s" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="react组件生命周期" />
+  <meta property="og:site_name" content="menghuaL" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="menghuaL" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">menghuaL</a></h1>
+  <h2><a href="/">锐不可当</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="https://github.com/lmh28/lmh28.github.io" target="_blank" rel="noopener">GitHub</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2020-02-23T03:38:40.000Z"><a href="/2020/02/23/react组件生命周期/">2020-02-23</a></time>
+      
+      
+  
+    <h1 class="title">react组件生命周期</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>前言：react生命周期构子函数分为三个阶段:挂载阶段、更新阶段、销毁阶段</p>
+</blockquote>
+<h3 id="一、挂载阶段的生命周期函数"><a href="#一、挂载阶段的生命周期函数" class="headerlink" title="一、挂载阶段的生命周期函数"></a>一、挂载阶段的生命周期函数</h3><ul>
+<li><B>constructor(props)</B><blockquote>
+<p>应当做些初始化的动作，如：初始化<code>state</code>，将事件处理函数绑定到类实例上</p>
+</blockquote>
+</li>
+<li>static getDerivedStateFromProps(props,state)<blockquote>
+<p>在组件实例化后,和接受新的<code>props</code>后被调用。<br>他必须返回一个对象来更新状态,或者返回null表示新的props不需要任何state的更新。<br>如果是由于父组件的<code>props</code>更改，所带来的重新渲染，也会触发此方法</p>
+</blockquote>
+</li>
+<li><B>render()</B><blockquote>
+<p>render()方法是必需的。当他被调用时，他将计算<code>this.props</code>和<code>this.state</code>，<br>并返回以下一种类型： </p>
+<pre><code>1. React元素。通过jsx创建，既可以是dom元素，也可以是用户自定义的组件。 
+2. 字符串或数字。他们将会以文本节点形式渲染到dom中。 
+3. null，什么也不渲染 
+4. 布尔值。也是什么都不渲染。</code></pre></blockquote>
+</li>
+<li><B>componentDidMount()</B><blockquote>
+<p>组件被装配后立即调用。初始化使得DOM节点应该进行到这里。<br>  <B><font color=red >通常在这里进行ajax请求</font></B><br>  如果要初始化第三方的dom库，也在这里进行初始化。<br>  只有到这里才能获取到真实的dom.</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>挂载阶段又分为三个过程：<br>1.将要挂载：componentWillMount<br>2.执行render方法渲染页面，render方法在挂载阶段会执行<br>3.挂载完成：componentDidMount（只执行一次）</p>
+</blockquote>
+<h3 id="二、更新阶段的生命周期函数"><a href="#二、更新阶段的生命周期函数" class="headerlink" title="二、更新阶段的生命周期函数"></a>二、更新阶段的生命周期函数</h3><ul>
+<li>static getDerivedStateFromProps(props, state)</li>
+<li>shouldComponentUpdate(nextProps, nextState)<blockquote>
+<p>当组件接收新的属性之后(componentWillReceiveProps)<br>判断组件是否需要更新：shouldComponentUpdate(默认返回的是<code>true</code>)<br>返回true时，表示组件需要更新，会执行：componentWillUpdate将要更新,渲染(render)<br>返回false表示后面内容不再执行，不渲染(render)</p>
+</blockquote>
+</li>
+<li><B>render()</B></li>
+<li>getSnapshotBeforeUpdate(prevProps, prevState)<blockquote>
+<p><font color=red>必须和<code>componentDidUpdate</code>一起使用</font><br>必须返回一个值<br>不能和旧版本的钩子函数一起使用<br>目的是为了返回数据更新之前的状态<br>在react <code>render()</code>后的输出被渲染到DOM之前被调用。它使您的组件能够在它们被潜在更改之前捕获当前值（如滚动位置）。这个生命周期返回的任何值都将作为参数传递给componentDidUpdate（）。</p>
+</blockquote>
+</li>
+<li><B>componentDidUpdate(prevProps, prevState, snapshot)</B><blockquote>
+<p>当组件更新时，将此作为一个机会来操作DOM。<br>只要您将当前的props与以前的props进行比较<br>（例如，如果props没有改变，则可能不需要网络请求），这也是做网络请求的好地方。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>在更新阶段我们只要修改了属性(props)和states数据都会重新渲染页面，重新渲染页面就是重新执行render这个函数<br><font color=red><B>注意：</B></font>如果在render中调用了设置变量或者设置数据的方法，如果在render调用了this.setState方法就会出现死循环这种情况</p>
+</blockquote>
+<h3 id="三、卸载阶段的生命周期函数"><a href="#三、卸载阶段的生命周期函数" class="headerlink" title="三、卸载阶段的生命周期函数"></a>三、卸载阶段的生命周期函数</h3><ul>
+<li>componentWillUnmount()<blockquote>
+<p>组件被卸载并销毁之前立即被调用。<br>在此方法中执行任何必要的清理，<br>例如使定时器无效，<br>取消网络请求或清理在<code>componentDidMount</code>中创建的任何监听。</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:lmh28.github.io">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2020/02/23/react组件生命周期/">react组件生命周期</a>
+      </li>
+    
+      <li>
+        <a href="/2020/01/06/js中常见的排序方法/">js中常见的排序方法</a>
+      </li>
+    
+      <li>
+        <a href="/2020/01/04/js中常见的设计模式/">js中常见的设计模式</a>
+      </li>
+    
+      <li>
+        <a href="/2019/12/27/SEO优化/">SEO优化(又叫搜索引擎优化)</a>
+      </li>
+    
+      <li>
+        <a href="/2019/11/20/移动端开发需要注意的事项/">移动端开发需要注意的事项</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2020 吕梦华
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>
