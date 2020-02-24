@@ -64,6 +64,83 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2020-02-24T11:39:54.000Z"><a href="/2020/02/24/从零react从入门到放弃/">2020-02-24</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/02/24/从零react从入门到放弃/">从零react从入门到放弃</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>简介：<a href="https://reactjs.bootcss.com" target="_blank" rel="noopener">react</a>是Facebook出的一款针对view视层图的library(库)，主要使用单向数据流的方式进行数据展示。react拥有较高的性能，代码逻辑非常简单，越来越多的人已经开始关注和使用他</p>
+</blockquote>
+<h2 id="React特点"><a href="#React特点" class="headerlink" title="React特点"></a>React特点</h2><ul>
+<li>1.声明式设计——react采用声明范式，可以轻松描述应用。</li>
+<li>2.高效——React通过对DOM的模拟，最大限度地减少与DOM的交互。</li>
+<li>3.灵活——React可以与已知的库或框架很好地配合。</li>
+<li>4.JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>5.组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>6.单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
+</ul>
+<h2 id="React的安装"><a href="#React的安装" class="headerlink" title="React的安装"></a>React的安装</h2><ul>
+<li>可直接安装，也可直接使用</li>
+</ul>
+<ol>
+<li>直接使用(也可在<a href="https://zh-hans.reactjs.org/" target="_blank" rel="noopener">中文官网</a>下载最新版本)<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">" https://cdn.bootcss.com/react/16.10.2/umd/react.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/react-dom/16.10.2/umd/react-dom.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/@babel/standalone/babel.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>通过npm或yarn使用React<br>国内使用<code>npm</code>速度很慢，可以使用淘宝镜像<code>cnpm</code>命令行工具来代替<code>npm</code></li>
+</ol>
+<ul>
+<li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+<li>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm (npx 或 cnpm) i create-react-app -g <span class="comment"># 全局安装脚手架</span></span><br><span class="line">create-react-app XXX <span class="comment"># 创建项目 (XXX项目名称)</span></span><br><span class="line">npm start <span class="comment"># 启动项目</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">yarn start <span class="comment"># 启动项目</span></span><br></pre></td></tr></table></figure>
+<h2 id="script-的type-属性指定为text-babel"><a href="#script-的type-属性指定为text-babel" class="headerlink" title="script 的type 属性指定为text/babel"></a>script 的type 属性指定为text/babel</h2><ul>
+<li>babel:讲es6转为es5解析jsx</li>
+<li>jsx：是一种语法糖<ul>
+<li>Jsx是JavaScript扩展的意思  相当于js+html </li>
+<li>Jsx不是必须的，但是用jsx可以提高效率</li>
+</ul>
+</li>
+<li>Jsx注意事项<br>A. 对象不能直接渲染,数组以字符串的形式进行渲染<br>B. jsx中 class 改为className<br>C. 事件的首字母要大写 onXxx 形式<br>D. value改为defaultValue<br>E. checked改为defaultChecked<br>F. for改为htmlFor<br>G. style写对象<br>H. {/<em>注释</em>/}</li>
+</ul>
+<h2 id="class定义的组件"><a href="#class定义的组件" class="headerlink" title="class定义的组件"></a>class定义的组件</h2><blockquote>
+<p>class定义的组件可以设置局部状态<br>在使用的时候需要注意this指向的问题<br>每一个class定义的组件都需要一个render方法，用来表示在页面中显示的内容</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">   <span class="keyword">constructor</span>() &#123;</span><br><span class="line">     <span class="keyword">super</span>();</span><br><span class="line">     <span class="keyword">this</span>.state = &#123;</span><br><span class="line">       count: <span class="number">1</span></span><br><span class="line">     &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">   render() &#123;</span><br><span class="line">     <span class="keyword">return</span> (</span><br><span class="line">       &lt;button</span><br><span class="line">         onClick=&#123;() =&gt; &#123;</span><br><span class="line">           <span class="keyword">this</span>.setState(&#123; <span class="attr">count</span>: <span class="keyword">this</span>.state.count + <span class="number">1</span> &#125;);</span><br><span class="line">         &#125;&#125;</span><br><span class="line">       &gt;</span><br><span class="line">         计数值(&#123;<span class="keyword">this</span>.state.count&#125;)</span><br><span class="line">       &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">     );</span></span><br><span class="line"><span class="regexp">   &#125;</span></span><br><span class="line"><span class="regexp"> &#125;</span></span><br><span class="line"><span class="regexp"> ReactDOM.render(&lt;Counter /</span>&gt;, <span class="built_in">document</span>.querySelector(<span class="string">"#app"</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="function-定义的组件"><a href="#function-定义的组件" class="headerlink" title="function 定义的组件"></a>function 定义的组件</h3><blockquote>
+<p>优势：1.通过function定义组件的写法更加js  2.没有this指向问题   3.代码结构简单，代码量小</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;useState&#125; = React</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// useState可以在function定义的组件中设置局部状态</span></span><br><span class="line">  <span class="comment">// 返回两个值，</span></span><br><span class="line">  <span class="comment">//    1.局部状态的名字</span></span><br><span class="line">  <span class="comment">//    2.改变状态的方法</span></span><br><span class="line">  <span class="keyword">const</span> [count,setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;button onClick=&#123;()=&gt;setCount(count+<span class="number">1</span>)&#125;&gt;计数值：&#123;count&#125;&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2020-02-23T03:38:40.000Z"><a href="/2020/02/23/react组件生命周期/">2020-02-23</a></time>
       
       
@@ -357,71 +434,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2019-08-02T01:10:28.000Z"><a href="/2019/08/02/常见的定位方式/">2019-08-02</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2019/08/02/常见的定位方式/">常见的定位方式</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h1>position:static/relative/absolute/fixed</h1>
-
-<h3>1.relative:相对定位</h3>
-
-<blockquote>
-<p><font color=red >相对定位的偏移参考元素是元素本身，不会使定位元素脱离文档流</font>。元素的初始位置占据的空间会被保留。（相对定位常常作为 absolute 的父级定位）。根据 top left bottom right 修改位置</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">position: relative;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">top:<span class="number">0</span>px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">left:<span class="number">0</span>px</span></pre></td></tr></table></figure>
-
-<h3>2.absolute:绝对定位</h3>
-
-<blockquote>
-<p>绝对定位元素 <font color=red>以父级元素中最近的定位元素为参考坐标，如果绝对定位元素的父级元素中没有采用定位，那么绝对定位元素的参考对象是根节点(html)</font>，元素会脱离文档流，不占据空间。根据 top left bottom right 修改位置</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">position: absolute;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">top:<span class="number">0</span>px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">left:<span class="number">0</span>px</span></pre></td></tr></table></figure>
-
-<h3>3.fixed:固定定位</h3>
-
-<blockquote>
-<p>固定定位<font color=red>位移的参考坐标是可视窗口</font>，使用固定定位会使元素脱离文档流。根据 top left bottom right 修改位置</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">position: fixed;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">top:<span class="number">0</span>px;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">left:<span class="number">0</span>px</span></pre></td></tr></table></figure>
-
-<h3>4.static:默认定位</h3>
-
-<blockquote>
-<p>默认值，元素框正常生成的，top left bottom right 这几个偏移属性不会影响其静态定位的正常显示</p>
-</blockquote>
-
-      
-    </div>
-    
-    <footer>
-        <div class="alignright">
-          
-          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
-        </div>
-        
-        
-        <!-- partial('post/share') -->
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
 
 <nav id="pagination">
   
@@ -447,6 +459,10 @@
   <ul class="entry">
     
       <li>
+        <a href="/2020/02/24/从零react从入门到放弃/">从零react从入门到放弃</a>
+      </li>
+    
+      <li>
         <a href="/2020/02/23/react组件生命周期/">react组件生命周期</a>
       </li>
     
@@ -460,10 +476,6 @@
     
       <li>
         <a href="/2019/12/27/SEO优化/">SEO优化(又叫搜索引擎优化)</a>
-      </li>
-    
-      <li>
-        <a href="/2019/11/20/移动端开发需要注意的事项/">移动端开发需要注意的事项</a>
       </li>
     
   </ul>

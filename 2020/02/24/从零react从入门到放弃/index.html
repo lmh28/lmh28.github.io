@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>从零react从入门到放弃 | menghuaL</title>
+  <meta name="author" content="吕梦华" />
+
+  
+  <meta name="description" content="简介：react是Facebook出的一款针对view视层图的library(库)，主要使用单向数据流的方式进行数据展示。react拥有较高的性能，代码逻辑非常简单，越来越多的人已经开始关注和使用他
+
+React特点
+1.声明式设计——react采用声明范式，可以轻松描述应用。
+2.高效——Reac" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="从零react从入门到放弃" />
+  <meta property="og:site_name" content="menghuaL" />
+
+  
+  
+
+  
+    <meta property="og:image" content="" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="menghuaL" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">menghuaL</a></h1>
+  <h2><a href="/">锐不可当</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="https://github.com/lmh28/lmh28.github.io" target="_blank" rel="noopener">GitHub</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2020-02-24T11:39:54.000Z"><a href="/2020/02/24/从零react从入门到放弃/">2020-02-24</a></time>
+      
+      
+  
+    <h1 class="title">从零react从入门到放弃</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <blockquote>
+<p>简介：<a href="https://reactjs.bootcss.com" target="_blank" rel="noopener">react</a>是Facebook出的一款针对view视层图的library(库)，主要使用单向数据流的方式进行数据展示。react拥有较高的性能，代码逻辑非常简单，越来越多的人已经开始关注和使用他</p>
+</blockquote>
+<h2 id="React特点"><a href="#React特点" class="headerlink" title="React特点"></a>React特点</h2><ul>
+<li>1.声明式设计——react采用声明范式，可以轻松描述应用。</li>
+<li>2.高效——React通过对DOM的模拟，最大限度地减少与DOM的交互。</li>
+<li>3.灵活——React可以与已知的库或框架很好地配合。</li>
+<li>4.JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>5.组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>6.单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
+</ul>
+<h2 id="React的安装"><a href="#React的安装" class="headerlink" title="React的安装"></a>React的安装</h2><ul>
+<li>可直接安装，也可直接使用</li>
+</ul>
+<ol>
+<li>直接使用(也可在<a href="https://zh-hans.reactjs.org/" target="_blank" rel="noopener">中文官网</a>下载最新版本)<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">" https://cdn.bootcss.com/react/16.10.2/umd/react.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/react-dom/16.10.2/umd/react-dom.development.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/@babel/standalone/babel.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>通过npm或yarn使用React<br>国内使用<code>npm</code>速度很慢，可以使用淘宝镜像<code>cnpm</code>命令行工具来代替<code>npm</code></li>
+</ol>
+<ul>
+<li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+<li>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm (npx 或 cnpm) i create-react-app -g <span class="comment"># 全局安装脚手架</span></span><br><span class="line">create-react-app XXX <span class="comment"># 创建项目 (XXX项目名称)</span></span><br><span class="line">npm start <span class="comment"># 启动项目</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">yarn start <span class="comment"># 启动项目</span></span><br></pre></td></tr></table></figure>
+<h2 id="script-的type-属性指定为text-babel"><a href="#script-的type-属性指定为text-babel" class="headerlink" title="script 的type 属性指定为text/babel"></a>script 的type 属性指定为text/babel</h2><ul>
+<li>babel:讲es6转为es5解析jsx</li>
+<li>jsx：是一种语法糖<ul>
+<li>Jsx是JavaScript扩展的意思  相当于js+html </li>
+<li>Jsx不是必须的，但是用jsx可以提高效率</li>
+</ul>
+</li>
+<li>Jsx注意事项<br>A. 对象不能直接渲染,数组以字符串的形式进行渲染<br>B. jsx中 class 改为className<br>C. 事件的首字母要大写 onXxx 形式<br>D. value改为defaultValue<br>E. checked改为defaultChecked<br>F. for改为htmlFor<br>G. style写对象<br>H. {/<em>注释</em>/}</li>
+</ul>
+<h2 id="class定义的组件"><a href="#class定义的组件" class="headerlink" title="class定义的组件"></a>class定义的组件</h2><blockquote>
+<p>class定义的组件可以设置局部状态<br>在使用的时候需要注意this指向的问题<br>每一个class定义的组件都需要一个render方法，用来表示在页面中显示的内容</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Counter</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">   <span class="keyword">constructor</span>() &#123;</span><br><span class="line">     <span class="keyword">super</span>();</span><br><span class="line">     <span class="keyword">this</span>.state = &#123;</span><br><span class="line">       count: <span class="number">1</span></span><br><span class="line">     &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">   render() &#123;</span><br><span class="line">     <span class="keyword">return</span> (</span><br><span class="line">       &lt;button</span><br><span class="line">         onClick=&#123;() =&gt; &#123;</span><br><span class="line">           <span class="keyword">this</span>.setState(&#123; <span class="attr">count</span>: <span class="keyword">this</span>.state.count + <span class="number">1</span> &#125;);</span><br><span class="line">         &#125;&#125;</span><br><span class="line">       &gt;</span><br><span class="line">         计数值(&#123;<span class="keyword">this</span>.state.count&#125;)</span><br><span class="line">       &lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">     );</span></span><br><span class="line"><span class="regexp">   &#125;</span></span><br><span class="line"><span class="regexp"> &#125;</span></span><br><span class="line"><span class="regexp"> ReactDOM.render(&lt;Counter /</span>&gt;, <span class="built_in">document</span>.querySelector(<span class="string">"#app"</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="function-定义的组件"><a href="#function-定义的组件" class="headerlink" title="function 定义的组件"></a>function 定义的组件</h3><blockquote>
+<p>优势：1.通过function定义组件的写法更加js  2.没有this指向问题   3.代码结构简单，代码量小</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;useState&#125; = React</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// useState可以在function定义的组件中设置局部状态</span></span><br><span class="line">  <span class="comment">// 返回两个值，</span></span><br><span class="line">  <span class="comment">//    1.局部状态的名字</span></span><br><span class="line">  <span class="comment">//    2.改变状态的方法</span></span><br><span class="line">  <span class="keyword">const</span> [count,setCount] = useState(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;button onClick=&#123;()=&gt;setCount(count+<span class="number">1</span>)&#125;&gt;计数值：&#123;count&#125;&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:lmh28.github.io">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2020/02/24/从零react从入门到放弃/">从零react从入门到放弃</a>
+      </li>
+    
+      <li>
+        <a href="/2020/02/23/react组件生命周期/">react组件生命周期</a>
+      </li>
+    
+      <li>
+        <a href="/2020/01/06/js中常见的排序方法/">js中常见的排序方法</a>
+      </li>
+    
+      <li>
+        <a href="/2020/01/04/js中常见的设计模式/">js中常见的设计模式</a>
+      </li>
+    
+      <li>
+        <a href="/2019/12/27/SEO优化/">SEO优化(又叫搜索引擎优化)</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2020 吕梦华
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>
